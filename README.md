@@ -1,7 +1,12 @@
-# KAGAA Website v2
+# KAGAA V5
+Homepage + product detail pages with a 1688-inspired product gallery:
+- vertical thumbnail strip on the left
+- large main product image
+- previous/next circular image controls
+- thumbnail selection
+- keyboard arrow navigation
+- touch swipe navigation on mobile
+- product specifications and brand description
+- no cart, checkout, payment or order functions
 
-Built from the user's supplied KAGAA logo and product images.
-
-The visual language is an original minimalist contemporary home/lifestyle presentation inspired by the structural qualities of design-brand websites. It does not copy HAY source code, trademarks, or proprietary assets.
-
-Open index.html to preview locally. Replace any product image with higher-resolution licensed photography when available.
+Add additional product images by putting files in `images/` and adding them to the relevant `gallery` array in `js/product.js`.

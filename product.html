@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KAGAA — Product</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html"><img src="images/kagaa-logo.png" alt="KAGAA"></a>
+  <nav>
+    <a href="index.html#catalog">Collection</a>
+    <a href="index.html#inspiration">Inspiration</a>
+    <a href="index.html#about">About</a>
+  </nav>
+  <div class="tools"><a href="index.html#catalog">Back to collection</a></div>
+</header>
+
+<main class="product-page">
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a><span>/</span><a id="crumbCat" href="index.html#catalog">Collection</a><span>/</span><span id="crumb">Product</span>
+  </div>
+
+  <section class="product-detail">
+    <div class="product-gallery">
+      <div class="thumbs" id="thumbs" aria-label="Product images"></div>
+
+      <div class="main-image-wrap" id="galleryViewport">
+        <img id="detailImg" class="main-image" src="" alt="">
+        <button class="gallery-arrow gallery-prev" id="prevBtn" aria-label="Previous image">←</button>
+        <button class="gallery-arrow gallery-next" id="nextBtn" aria-label="Next image">→</button>
+        <div class="gallery-counter" id="galleryCounter"></div>
+      </div>
+    </div>
+
+    <div class="product-copy">
+      <p class="eyebrow" id="detailCat"></p>
+      <h1 id="detailName"></h1>
+      <p class="lead" id="detailDesc"></p>
+
+      <div class="spec-list">
+        <div><span>Material</span><b id="detailMaterial"></b></div>
+        <div><span>Size</span><b id="detailSize"></b></div>
+      </div>
+
+      <div class="product-note">
+        <p class="eyebrow">ABOUT THE PRODUCT</p>
+        <p id="detailLong">Designed around everyday use, with a restrained form and considered material choices.</p>
+      </div>
+
+      <a class="back-link" href="index.html#catalog">← Back to collection</a>
+    </div>
+  </section>
+
+  <section class="detail-bottom">
+    <p class="eyebrow">KAGAA / EVERYDAY OBJECTS</p>
+    <h2>Useful things,<br>quietly designed.</h2>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <img src="images/kagaa-logo.png" alt="KAGAA">
+    <div><p class="eyebrow">KAGAA</p><p>Thoughtful objects<br>for everyday living.</p></div>
+    <div><p class="eyebrow">CONTACT</p><a href="#">hello@kagaa.com</a><a href="#">Instagram</a></div>
+  </div>
+  <div class="bottom">© <span id="year"></span> KAGAA <span>Privacy · Terms · Contact</span></div>
+</footer>
+
+<script src="js/product.js"></script>
+</body>
+</html>

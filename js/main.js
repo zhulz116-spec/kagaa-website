@@ -1,14 +1,14 @@
-const mega=document.getElementById('mega');
-const collectionBtn=document.getElementById('collectionBtn');
-const search=document.getElementById('search');
-const searchBtn=document.getElementById('searchBtn');
-const closeSearch=document.getElementById('closeSearch');
-const mobileMenu=document.getElementById('mobileMenu');
-function setMega(v){mega.classList.toggle('open',v)}
-collectionBtn.addEventListener('click',()=>setMega(!mega.classList.contains('open')));
-document.addEventListener('click',e=>{if(mega.classList.contains('open')&&!mega.contains(e.target)&&!collectionBtn.contains(e.target))setMega(false)});
-searchBtn.addEventListener('click',()=>{search.classList.add('open');search.querySelector('input').focus()});
-closeSearch.addEventListener('click',()=>search.classList.remove('open'));
-mobileMenu.addEventListener('click',()=>setMega(!mega.classList.contains('open')));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){setMega(false);search.classList.remove('open')}});
-document.getElementById('year').textContent=new Date().getFullYear();
+const products=[
+{id:"steel-cups",name:"Everyday Steel Cups",cat:"Kitchen & Dining",img:"cup.jpg",desc:"Minimal stainless steel drinkware with a clean geometric profile.",material:"Stainless steel",size:"Approx. 470 ml"},
+{id:"mixing-bowls",name:"Mixing Bowl Collection",cat:"Kitchen & Dining",img:"mixing-bowls.jpg",desc:"A practical family of stainless steel bowls for everyday preparation.",material:"Stainless steel",size:"Multi-size set"},
+{id:"matcha-ritual",name:"Matcha Ritual Set",cat:"Kitchen & Dining",img:"matcha-set.jpg",desc:"A considered set for preparing and enjoying matcha at home.",material:"Ceramic / bamboo / stainless steel",size:"Set"},
+{id:"table-runner",name:"Table Runner",cat:"Kitchen & Dining",img:"table-runner.jpg",desc:"Soft, understated table textile designed to layer into everyday dining.",material:"Textile",size:"Multiple lengths"},
+{id:"storage-bag",name:"Everyday Storage Bag",cat:"Home & Living",img:"storage-bag.jpg",desc:"Large-capacity storage for bedding, clothing and seasonal organisation.",material:"PP woven fabric",size:"92 L"},
+{id:"vacuum-storage",name:"Vacuum Storage Bags",cat:"Home & Living",img:"vacuum-storage.jpg",desc:"Space-saving storage designed for seasonal clothing and textiles.",material:"PA + PE",size:"Multiple sizes"},
+{id:"resistance-bands",name:"Resistance Bands",cat:"Active Living",img:"resistance-bands.webp",desc:"A compact resistance training set for movement at home or on the go.",material:"TPE / textile",size:"Multiple resistance levels"}
+];
+let current="all";const grid=document.getElementById("grid"),count=document.getElementById("count");
+function render(){let a=products.filter(p=>current==="all"||p.cat===current),s=document.getElementById("sort").value;if(s==="az")a.sort((x,y)=>x.name.localeCompare(y.name));if(s==="za")a.sort((x,y)=>y.name.localeCompare(x.name));count.textContent=a.length+" products";grid.innerHTML=a.map(p=>`<article class="card"><a href="product.html?id=${p.id}"><img src="images/${p.img}" alt="${p.name}"><div class="info"><p class="name">${p.name}</p><p class="cat">${p.cat}</p><p class="price">${p.material}</p></div></a></article>`).join("")}
+render();document.querySelectorAll(".categories button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".categories button").forEach(x=>x.classList.remove("active"));b.classList.add("active");current=b.dataset.category;render()});document.getElementById("sort").onchange=render;
+const mega=document.getElementById("collection");document.querySelector('[data-menu="collection"]').onclick=()=>mega.classList.toggle("open");
+const search=document.getElementById("search"),filters=document.getElementById("filters");document.getElementById("searchOpen").onclick=()=>{search.classList.add("open");search.querySelector("input").focus()};document.getElementById("searchClose").onclick=()=>search.classList.remove("open");document.getElementById("filterOpen").onclick=()=>filters.classList.add("open");document.getElementById("filterClose").onclick=()=>filters.classList.remove("open");document.getElementById("hamburger").onclick=()=>filters.classList.add("open");document.getElementById("year").textContent=new Date().getFullYear();
