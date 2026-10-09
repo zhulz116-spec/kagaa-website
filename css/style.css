@@ -750,7 +750,7 @@ body {
 .header nav button,
 .tools a,
 .tools button {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.055em;
   text-transform: uppercase;
   transition: opacity 0.2s ease;
