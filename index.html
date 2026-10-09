@@ -1,27 +1,237 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="KAGAA — thoughtfully designed objects for everyday living.">
-<title>KAGAA — Everyday Objects</title><link rel="stylesheet" href="css/style.css">
-</head><body>
-<header class="header">
-<a class="brand" href="index.html"><img src="images/kagaa-logo.png" alt="KAGAA"></a>
-<nav><button data-menu="collection">Collection</button><a href="#catalog">New</a><a href="#inspiration">Inspiration</a><a href="#about">About</a></nav>
-<div class="tools"><button id="searchOpen">Search</button><a href="#catalog">Collection</a><button class="hamburger" id="hamburger">☰</button></div>
-</header>
-<div class="mega" id="collection"><div><small>COLLECTION</small><a href="#catalog">All objects</a><a href="#catalog">New arrivals</a></div><div><small>KITCHEN & DINING</small><a href="#catalog">Drinkware</a><a href="#catalog">Tableware</a><a href="#catalog">Coffee & Tea</a><a href="#catalog">Textiles</a></div><div><small>HOME & LIVING</small><a href="#catalog">Storage</a><a href="#catalog">Organising</a></div><div><small>ACTIVE LIVING</small><a href="#catalog">Movement</a><a href="#catalog">Training</a></div></div>
-<main>
-<section class="hero"><img src="images/table-runner.jpg" alt="KAGAA table setting"><div class="shade"></div><div class="hero-copy"><p>EVERYDAY OBJECTS / 2026</p><h1>Thoughtful objects<br>for everyday living.</h1><a href="#catalog">Explore the collection ↗</a></div></section>
-<section class="intro"><p class="eyebrow">THE KAGAA APPROACH</p><h2>Simple forms.<br>Considered details.<br>Everyday function.</h2></section>
-<section class="editorial"><img src="images/cup.jpg" alt="KAGAA drinkware"><div><p class="eyebrow">KITCHEN & DINING</p><h2>Objects for<br>daily rituals.</h2><p>Functional pieces with a quiet visual language, selected for contemporary homes and everyday use.</p><a href="#catalog">Discover kitchen & dining ↗</a></div></section>
-<section class="catalog" id="catalog"><div class="catalog-head"><div><p class="eyebrow">SHOP THE COLLECTION</p><h2>Everyday objects</h2></div><div><span id="count">8 products</span><button id="filterOpen">Filter & Sort +</button></div></div>
-<div class="categories"><button class="active" data-category="all">All</button><button data-category="Kitchen & Dining">Kitchen & Dining</button><button data-category="Home & Living">Home & Living</button><button data-category="Active Living">Active Living</button></div>
-<div class="shop"><aside id="filters"><div class="filter-head"><b>FILTERS</b><button id="filterClose">×</button></div><div class="filter-group"><b>Category</b><label><input type="checkbox"> Kitchen & Dining</label><label><input type="checkbox"> Home & Living</label><label><input type="checkbox"> Active Living</label></div><div class="filter-group"><b>Material</b><label><input type="checkbox"> Stainless steel</label><label><input type="checkbox"> Ceramic</label><label><input type="checkbox"> Textile</label><label><input type="checkbox"> PE / PA</label></div><div class="filter-group"><b>Sort</b><select id="sort"><option value="featured">Featured</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select></div></aside><div class="grid" id="grid"></div></div></section>
-<section class="story" id="inspiration"><img src="images/matcha-set.jpg" alt="KAGAA matcha ritual"><div><p class="eyebrow">INSPIRATION / RITUAL</p><h2>The beauty<br>of useful things.</h2><p>Small rituals shape the feeling of a home. KAGAA brings a considered point of view to the objects around them.</p><a href="#about">Read the story ↗</a></div></section>
-<section class="collections"><div><img src="images/mixing-bowls.jpg"><span>Kitchen & Dining ↗</span></div><div><img src="images/storage-bag.jpg"><span>Home & Living ↗</span></div><div><img src="images/resistance-bands.webp"><span>Active Living ↗</span></div></section>
-<section class="about" id="about"><div><p class="eyebrow">ABOUT KAGAA</p><h2>Modern objects,<br>made for real life.</h2></div><div><p>KAGAA creates considered objects for the spaces and rituals of everyday life. We look for a balance between form, function, material and quiet visual character.</p><p>Our collections are practical, contemporary and designed to live together.</p></div></section>
-</main>
-<footer><div class="footer-grid"><img src="images/kagaa-logo.png"><div><p class="eyebrow">KAGAA</p><p>Thoughtful objects<br>for everyday living.</p></div><div><p class="eyebrow">CONTACT</p><a>hello@kagaa.com</a><a>Instagram</a></div><div><p class="eyebrow">NEWSLETTER</p><form><input type="email" placeholder="Email address"><button>Subscribe ↗</button></form></div></div><div class="bottom">© <span id="year"></span> KAGAA <span>Privacy · Terms · Contact</span></div></footer>
-<div class="search" id="search"><button id="searchClose">×</button><div><p class="eyebrow">SEARCH KAGAA</p><input type="search" placeholder="Search products, collections..."></div></div>
-<script src="js/main.js"></script></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="KAGAA — thoughtfully designed objects for everyday living."
+    />
+    <title>KAGAA — Everyday Objects</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="index.html"
+        ><img src="images/KAGAA_Logo.svg" alt="KAGAA"
+      /></a>
+      <nav>
+        <button data-menu="collection">Collection</button
+        ><a href="#catalog">New</a><a href="#inspiration">Inspiration</a
+        ><a href="#about">About</a>
+      </nav>
+      <div class="tools">
+        <!-- <button id="searchOpen">Search</button> -->
+        <!-- <a href="#catalog">Collection</a
+        ><button class="hamburger" id="hamburger">☰</button> -->
+      </div>
+    </header>
+    <div class="mega" id="collection">
+      <div>
+        <small>COLLECTION</small><a href="#catalog">All objects</a
+        ><a href="#catalog">New arrivals</a>
+      </div>
+      <div>
+        <small>KITCHEN & DINING</small><a href="#catalog">Drinkware</a
+        ><a href="#catalog">Tableware</a><a href="#catalog">Coffee & Tea</a
+        ><a href="#catalog">Textiles</a>
+      </div>
+      <div>
+        <small>HOME & LIVING</small><a href="#catalog">Storage</a
+        ><a href="#catalog">Organising</a>
+      </div>
+      <div>
+        <small>ACTIVE LIVING</small><a href="#catalog">Movement</a
+        ><a href="#catalog">Training</a>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <img src="images/background.jpg" alt="KAGAA table setting" />
+        <div class="shade"></div>
+        <div class="hero-copy">
+          <p>EVERYDAY OBJECTS / 2026</p>
+          <h1>Things worth <br />living with.</h1>
+          <a href="#catalog">Explore the collection ↗</a>
+        </div>
+      </section>
+      <section class="intro">
+        <p class="eyebrow">THE KAGAA APPROACH</p>
+        <h2>Simple forms.<br />Considered details.<br />Everyday function.</h2>
+      </section>
+      <section class="editorial">
+        <img src="images/mocha-EN.jpg" alt="KAGAA drinkware" />
+        <div>
+          <p class="eyebrow">KITCHEN & DINING</p>
+          <h2>Objects for<br />daily rituals.</h2>
+          <p>
+            Functional pieces with a quiet visual language, selected for
+            contemporary homes and everyday use.
+          </p>
+          <a href="#catalog">Discover kitchen & dining ↗</a>
+        </div>
+      </section>
+      <section class="catalog" id="catalog">
+        <div class="catalog-head">
+          <div>
+            <p class="eyebrow">SHOP THE COLLECTION</p>
+            <h2>Everyday objects</h2>
+          </div>
+          <div>
+            <span id="count">8 products</span
+            ><button id="filterOpen">Filter & Sort +</button>
+          </div>
+        </div>
+        <div class="categories">
+          <button class="active" data-category="all">All</button
+          ><button data-category="Kitchen & Dining">Kitchen & Dining</button
+          ><button data-category="Home & Living">Home & Living</button
+          ><button data-category="Active Living">Active Living</button>
+        </div>
+        <div class="shop">
+          <aside id="filters">
+            <div class="filter-head">
+              <b>FILTERS</b><button id="filterClose">×</button>
+            </div>
+            <div class="filter-group">
+              <b>Category</b
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Kitchen & Dining"
+                />
+                Kitchen & Dining</label
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Home & Living"
+                />
+                Home & Living</label
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="category"
+                  value="Active Living"
+                />
+                Active Living</label
+              >
+            </div>
+            <div class="filter-group">
+              <b>Material</b
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="material"
+                  value="Stainless steel"
+                />
+                Stainless steel</label
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="material"
+                  value="Ceramic"
+                />
+                Ceramic</label
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="material"
+                  value="Textile"
+                />
+                Textile</label
+              ><label
+                ><input
+                  type="checkbox"
+                  data-filter="material"
+                  value="PE / PA"
+                />
+                PE / PA</label
+              >
+            </div>
+            <div class="filter-group">
+              <b>Sort</b
+              ><select id="sort">
+                <option value="featured">Featured</option>
+                <option value="az">Name A–Z</option>
+                <option value="za">Name Z–A</option>
+              </select>
+            </div>
+          </aside>
+          <div class="grid" id="grid"></div>
+        </div>
+      </section>
+      <!-- <section class="story" id="inspiration">
+        <img src="images/matcha-set.jpg" alt="KAGAA matcha ritual" />
+        <div>
+          <p class="eyebrow">INSPIRATION / RITUAL</p>
+          <h2>The beauty<br />of useful things.</h2>
+          <p>
+            Small rituals shape the feeling of a home. KAGAA brings a considered
+            point of view to the objects around them.
+          </p>
+          <a href="#about">Read the story ↗</a>
+        </div>
+      </section> -->
+      <!-- <section class="collections">
+        <div>
+          <img src="images/mixing-bowls.jpg" /><span>Kitchen & Dining ↗</span>
+        </div>
+        <div><img src="images/save-bag.jpg" /><span>Home & Living ↗</span></div>
+        <div>
+          <img src="images/resistance-bands.webp" /><span>Active Living ↗</span>
+        </div>
+      </section> -->
+      <section class="about" id="about">
+        <div>
+          <p class="eyebrow">ABOUT KAGAA</p>
+          <h2>Modern objects,<br />made for real life.</h2>
+        </div>
+        <div>
+          <p>
+            KAGAA creates considered objects for the spaces and rituals of
+            everyday life. We look for a balance between form, function,
+            material and quiet visual character.
+          </p>
+          <p>
+            Our collections are practical, contemporary and designed to live
+            together.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <img src="images/KAGAA_Logo.svg" />
+        <div>
+          <p class="eyebrow">KAGAA</p>
+          <p>Thoughtful objects<br />for everyday living.</p>
+        </div>
+        <div>
+          <p class="eyebrow">CONTACT</p>
+          <a>jiajia.official@outlook.com</a>
+        </div>
+        <!-- <div>
+          <p class="eyebrow">NEWSLETTER</p>
+          <form>
+            <input type="email" placeholder="Email address" /><button>
+              Subscribe ↗
+            </button>
+          </form>
+        </div> -->
+      </div>
+      <div class="bottom">
+        © <span id="year"></span> KAGAA <span>Privacy · Terms · Contact</span>
+      </div>
+    </footer>
+    <div class="search" id="search">
+      <button id="searchClose">×</button>
+      <div>
+        <p class="eyebrow">SEARCH KAGAA</p>
+        <input type="search" placeholder="Search products, collections..." />
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
