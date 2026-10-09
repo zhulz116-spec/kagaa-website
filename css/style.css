@@ -44,6 +44,17 @@ select {
   width: 145px;
   height: 76px;
 }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand svg {
+  display: block;
+  width: clamp(90px, 10vw, 140px);
+  height: auto;
+}
 .header nav {
   display: flex;
   gap: 30px;
